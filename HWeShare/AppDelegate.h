@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "CRTabBarController.h"
+#import "GoodsViewController.h"
+@interface AppDelegate : UIResponder <UIApplicationDelegate,CRTabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
