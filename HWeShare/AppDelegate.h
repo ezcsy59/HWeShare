@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "CRTabBarController.h"
 #import "GoodsViewController.h"
+@class AKTabBarController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate,CRTabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic, strong) AKTabBarController *tabBarController;
 
 @end

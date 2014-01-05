@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "AKTabBarController.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -16,7 +16,10 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [self setupTabBarController];
+//    [self setupTabBarController];
+    // If the device is an iPad, we make it taller.
+    _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50];
+    [_tabBarController setMinimumHeightToDisplayTitle:40.0];
     
     [self.window makeKeyAndVisible];
     return YES;
@@ -115,6 +118,9 @@
     
     
 }
+
+
+
 
 
 
