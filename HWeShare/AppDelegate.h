@@ -17,4 +17,7 @@
 
 @property (nonatomic, strong) AKTabBarController *tabBarController;
 
+@property (nonatomic, retain) NSString  *testsch;
+
+@property (nonatomic, retain) NSMutableDictionary  *detail;
 @end

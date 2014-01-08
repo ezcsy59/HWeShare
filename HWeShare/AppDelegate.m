@@ -28,10 +28,14 @@
     [_tabBarController setMinimumHeightToDisplayTitle:40.0];
     
     
+    SearchVC *seach=[[SearchVC alloc] init];
+    
+    UINavigationController *nav= [[UINavigationController alloc] initWithRootViewController:seach];
+
+    nav.navigationBar.tintColor= [UIColor darkGrayColor];
     [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
-                                        
-                                           [[TestViewController alloc] init],[[SecondViewController alloc] init],[[ThirdViewController alloc] init],[[FourthViewController alloc] init],
-                                           [[SearchVC alloc] init],nil]];
+                                                nav,
+                                           [[SecondViewController alloc] init],[[ThirdViewController alloc] init],[[FourthViewController alloc] init],nil]];
     // Tab background Image
     [_tabBarController setBackgroundImageName:@"noise-dark-gray.png"];
     [_tabBarController setSelectedBackgroundImageName:@"noise-dark-blue.png"];

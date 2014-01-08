@@ -20,6 +20,43 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 - (NSString*)urlString
 {
     
+//    NSString *re;
+//    NSArray *array = [self allKeys];
+//	array = [array sortedArrayUsingSelector:@selector(compare:)];
+//	NSMutableString *url = [NSMutableString stringWithCapacity:1024];
+//	NSMutableString *str = [NSMutableString stringWithCapacity:1024];
+//    //	[str appendString:app_secret_key];
+//	NSUInteger i, count = [array count];
+//	for (i = 0; i < count; i++) {
+//		if ([url length]) {
+//			[url appendString:@"&"];
+//		}
+//		NSString * obj = [array objectAtIndex:i];
+//		[url appendFormat:@"%@=%@", obj, [self objectForKey:obj]];
+//		[str appendFormat:@"%@%@",obj, [self objectForKey:obj]];
+//	}
+//    re= [app_secret_key stringByAppendingString:str];
+//    NSLog(re);
+//    NSString *hash = [re md5];
+//    
+////    NSString *test = @"7a8c5138e845ee975cb17f8a896c6b79app_key1029925fieldstitle,click_urlformatjsonkeyword三星method59miao.items.searchpage_no1page_size20timestamp2014-01-06 13:27:11v1.1";
+////   hash = [test md5];
+//    
+//    [self setObject:hash forKey:@"sign"];
+//	array = [self allKeys];
+//	array = [array sortedArrayUsingSelector:@selector(compare:)];
+//	[url setString:@""];
+//	for (i = 0; i < [array count]; i++) {
+//		if ([url length]) {
+//			[url appendString:@"&"];
+//		}
+//		NSString *obj = [array objectAtIndex:i];
+//		[url appendFormat:@"%@=%@", obj, [self objectForKey:obj]];
+//	}
+//	
+//    
+//	return url;
+
     NSString *re;
     NSArray *array = [self allKeys];
 	array = [array sortedArrayUsingSelector:@selector(compare:)];
@@ -36,12 +73,11 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 		[str appendFormat:@"%@%@",obj, [self objectForKey:obj]];
 	}
     re= [app_secret_key stringByAppendingString:str];
+    
+    //    re= [NSURL URLWithString: [re stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] ;
     NSLog(re);
+    
     NSString *hash = [re md5];
-    
-    NSString *test = @"7a8c5138e845ee975cb17f8a896c6b79app_key1029925fieldstitle,click_urlformatjsonkeyword三星method59miao.items.searchpage_no1page_size20timestamp2014-01-06 13:27:11v1.1";
-   hash = [test md5];
-    
     [self setObject:hash forKey:@"sign"];
 	array = [self allKeys];
 	array = [array sortedArrayUsingSelector:@selector(compare:)];
@@ -54,10 +90,10 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 		[url appendFormat:@"%@=%@", obj, [self objectForKey:obj]];
 	}
 	
-    
-	return url;
+    //    url= [NSURL URLWithString: [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] ;
+    //    NSLog(url);
+    return url;
 
-    
 }
 
 - (NSString*)urlString2

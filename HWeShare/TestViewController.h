@@ -14,6 +14,8 @@
     
 }
 @property (retain,nonatomic) NSMutableArray *array;
+
+@property (retain,nonatomic) NSString *search;
 -(void)loadmore;
 
 
