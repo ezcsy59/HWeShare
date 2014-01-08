@@ -9,6 +9,7 @@
 #import "DetailVC.h"
 #import "AppDelegate.h"
 #import "SDImageView+SDWebCache.h"
+#import "WebVC.h"
 @interface DetailVC ()
 
 @end
@@ -28,7 +29,11 @@
 {
     AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
      NSURL *url=[NSURL URLWithString:[myDelegate.detail objectForKey:@"click_url" ] ];
-    [[UIApplication sharedApplication] openURL:url];
+    
+    myDelegate.url=url;
+    WebVC *webvc =[[WebVC alloc]init];
+    [self.navigationController pushViewController:webvc animated:YES];
+    
 }
 
 - (void)viewDidLoad

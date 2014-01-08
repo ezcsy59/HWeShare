@@ -19,5 +19,7 @@
 
 @property (nonatomic, retain) NSString  *testsch;
 
+@property (nonatomic, retain) NSURL  *url;
+
 @property (nonatomic, retain) NSMutableDictionary  *detail;
 @end

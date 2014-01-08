@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebVC : UIViewController
+@interface WebVC : UIViewController<UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
 
 @end

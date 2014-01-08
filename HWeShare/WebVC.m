@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    NSURLRequest *request=[NSURLRequest requestWithURL:myDelegate.url];
+    [self.webview loadRequest:request];
+
 }
 
 - (void)didReceiveMemoryWarning
