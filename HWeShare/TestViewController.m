@@ -13,6 +13,9 @@
 #import "ASIHTTPRequest.h"
 #import "SBJSON.h"
 #import "MJRefresh.h"
+
+#import "UIViewController+AKTabBarController.h"
+
 @interface TestViewController () <MJRefreshBaseViewDelegate>
 {
      MJRefreshFooterView *_footer;
@@ -33,6 +36,16 @@ static int page_no;
         self.array =[[NSMutableArray alloc] init ];
     }
     return self;
+}
+
+- (NSString *)tabImageName
+{
+	return @"sousuonew";
+}
+
+- (NSString *)tabTitle
+{
+	return @"搜你所爱";
 }
 
 -(void)loadmore
@@ -100,11 +113,16 @@ static int page_no;
 //
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 	[dict testDefault];
-	[dict setObject:@"iPhone" forKey:@"keyword"];
+    NSString *temp=@"iphone";
+  
+  
+	[dict setObject:temp forKey:@"keyword"];
 	NSString *urlString = [dict urlString];
 	urlString = [NSString stringWithFormat:@"http://api.59miao.com/router/rest?%@", urlString];
 	urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSLog(urlString);
 	NSURL *url = [NSURL URLWithString:urlString];
+    
     //	NSURLRequest *request = [NSURLRequest requestWithURL:url];
     //	[web loadRequest:request];
     
