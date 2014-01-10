@@ -44,7 +44,21 @@
 		046D8580187968AC0094F214 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D83D1187968AA0094F214 /* SBJsonWriter.m */; };
 		046D86BF18796FB20094F214 /* NSStringEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D86BC18796FB10094F214 /* NSStringEx.m */; };
 		046D86C018796FB20094F214 /* NSMutableDictionaryTaobao.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D86BE18796FB20094F214 /* NSMutableDictionaryTaobao.m */; };
+		049268FA187A410000383E0C /* UIViewController+AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049268F9187A410000383E0C /* UIViewController+AKTabBarController.m */; };
+		049268FC187A466C00383E0C /* sousuo.png in Resources */ = {isa = PBXBuildFile; fileRef = 049268FB187A466A00383E0C /* sousuo.png */; };
+		049268FE187A4A2B00383E0C /* sousuonew.png in Resources */ = {isa = PBXBuildFile; fileRef = 049268FD187A4A2900383E0C /* sousuonew.png */; };
 		0498AFE8186AC3BD00090B73 /* TimeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498AFE7186AC3BD00090B73 /* TimeTools.m */; };
+		0498F82D187A875100AF452A /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498F824187A875000AF452A /* FirstViewController.m */; };
+		0498F82E187A875100AF452A /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498F826187A875000AF452A /* SecondViewController.m */; };
+		0498F82F187A875100AF452A /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498F828187A875100AF452A /* ThirdViewController.m */; };
+		0498F830187A875100AF452A /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498F82A187A875100AF452A /* FourthViewController.m */; };
+		0498F831187A875100AF452A /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0498F82C187A875100AF452A /* ContentViewController.m */; };
+		049D62DF187CE3BE00729266 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 049D62DD187CE3BE00729266 /* SearchVC.m */; };
+		049D62E0187CE3BF00729266 /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D62DE187CE3BE00729266 /* SearchVC.xib */; };
+		049D62E4187D225700729266 /* DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 049D62E2187D225600729266 /* DetailVC.m */; };
+		049D62E5187D225700729266 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D62E3187D225600729266 /* DetailVC.xib */; };
+		049D62E9187D41DD00729266 /* WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 049D62E7187D41DA00729266 /* WebVC.m */; };
+		049D62EA187D41DD00729266 /* WebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049D62E8187D41DB00729266 /* WebVC.xib */; };
 		04A865B51869336100C3194E /* ICN_account_ON.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A865951869334800C3194E /* ICN_account_ON.png */; };
 		04A865B61869336100C3194E /* ICN_account_ON@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A865961869334800C3194E /* ICN_account_ON@2x.png */; };
 		04A865B71869336100C3194E /* ICN_account.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A865971869334800C3194E /* ICN_account.png */; };
@@ -186,8 +200,31 @@
 		046D86BC18796FB10094F214 /* NSStringEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringEx.m; sourceTree = "<group>"; };
 		046D86BD18796FB10094F214 /* NSMutableDictionaryTaobao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableDictionaryTaobao.h; sourceTree = "<group>"; };
 		046D86BE18796FB20094F214 /* NSMutableDictionaryTaobao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableDictionaryTaobao.m; sourceTree = "<group>"; };
+		049268F8187A410000383E0C /* UIViewController+AKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AKTabBarController.h"; sourceTree = "<group>"; };
+		049268F9187A410000383E0C /* UIViewController+AKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AKTabBarController.m"; sourceTree = "<group>"; };
+		049268FB187A466A00383E0C /* sousuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuo.png; sourceTree = "<group>"; };
+		049268FD187A4A2900383E0C /* sousuonew.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuonew.png; sourceTree = "<group>"; };
 		0498AFE6186AC3BD00090B73 /* TimeTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTools.h; sourceTree = "<group>"; };
 		0498AFE7186AC3BD00090B73 /* TimeTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTools.m; sourceTree = "<group>"; };
+		0498F823187A875000AF452A /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		0498F824187A875000AF452A /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		0498F825187A875000AF452A /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		0498F826187A875000AF452A /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		0498F827187A875000AF452A /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		0498F828187A875100AF452A /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		0498F829187A875100AF452A /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		0498F82A187A875100AF452A /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		0498F82B187A875100AF452A /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		0498F82C187A875100AF452A /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		049D62DC187CE3BE00729266 /* SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchVC.h; sourceTree = "<group>"; };
+		049D62DD187CE3BE00729266 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
+		049D62DE187CE3BE00729266 /* SearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
+		049D62E1187D225500729266 /* DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailVC.h; sourceTree = "<group>"; };
+		049D62E2187D225600729266 /* DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailVC.m; sourceTree = "<group>"; };
+		049D62E3187D225600729266 /* DetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
+		049D62E6187D41D800729266 /* WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebVC.h; sourceTree = "<group>"; };
+		049D62E7187D41DA00729266 /* WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebVC.m; sourceTree = "<group>"; };
+		049D62E8187D41DB00729266 /* WebVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebVC.xib; sourceTree = "<group>"; };
 		04A865951869334800C3194E /* ICN_account_ON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ICN_account_ON.png; path = CRTabBar/ICN_account_ON.png; sourceTree = SOURCE_ROOT; };
 		04A865961869334800C3194E /* ICN_account_ON@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ICN_account_ON@2x.png"; path = "CRTabBar/ICN_account_ON@2x.png"; sourceTree = SOURCE_ROOT; };
 		04A865971869334800C3194E /* ICN_account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ICN_account.png; path = CRTabBar/ICN_account.png; sourceTree = SOURCE_ROOT; };
@@ -454,9 +491,30 @@
 				046D8378187966CD0094F214 /* TestViewController.h */,
 				046D8379187966CE0094F214 /* TestViewController.m */,
 				046D837A187966CE0094F214 /* TestViewController.xib */,
+				049268F8187A410000383E0C /* UIViewController+AKTabBarController.h */,
+				049268F9187A410000383E0C /* UIViewController+AKTabBarController.m */,
 				04A8663B1869820C00C3194E /* GoodsViewController.h */,
 				04A8663C1869820C00C3194E /* GoodsViewController.m */,
 				04A8663D1869820C00C3194E /* GoodsViewController.xib */,
+				0498F823187A875000AF452A /* FirstViewController.h */,
+				0498F824187A875000AF452A /* FirstViewController.m */,
+				0498F825187A875000AF452A /* SecondViewController.h */,
+				0498F826187A875000AF452A /* SecondViewController.m */,
+				0498F827187A875000AF452A /* ThirdViewController.h */,
+				0498F828187A875100AF452A /* ThirdViewController.m */,
+				0498F829187A875100AF452A /* FourthViewController.h */,
+				0498F82A187A875100AF452A /* FourthViewController.m */,
+				0498F82B187A875100AF452A /* ContentViewController.h */,
+				0498F82C187A875100AF452A /* ContentViewController.m */,
+				049D62DC187CE3BE00729266 /* SearchVC.h */,
+				049D62DD187CE3BE00729266 /* SearchVC.m */,
+				049D62DE187CE3BE00729266 /* SearchVC.xib */,
+				049D62E1187D225500729266 /* DetailVC.h */,
+				049D62E2187D225600729266 /* DetailVC.m */,
+				049D62E3187D225600729266 /* DetailVC.xib */,
+				049D62E6187D41D800729266 /* WebVC.h */,
+				049D62E7187D41DA00729266 /* WebVC.m */,
+				049D62E8187D41DB00729266 /* WebVC.xib */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -543,6 +601,7 @@
 				04A865DE1869350B00C3194E /* image-4@2x.png */,
 				04A865E01869350B00C3194E /* noise-dark-blue.png */,
 				04A865E11869350B00C3194E /* noise-dark-blue@2x.png */,
+				049268FD187A4A2900383E0C /* sousuonew.png */,
 				04A865E21869350B00C3194E /* noise-dark-gray.png */,
 				04A865E31869350B00C3194E /* noise-dark-gray@2x.png */,
 				04A865E41869350B00C3194E /* noise-dark-green.png */,
@@ -552,6 +611,7 @@
 				04A865951869334800C3194E /* ICN_account_ON.png */,
 				04A865961869334800C3194E /* ICN_account_ON@2x.png */,
 				04A865971869334800C3194E /* ICN_account.png */,
+				049268FB187A466A00383E0C /* sousuo.png */,
 				04A865981869334800C3194E /* ICN_account@2x.png */,
 				04A865991869334800C3194E /* ICN_brand_ON.png */,
 				04A8659A1869334800C3194E /* ICN_brand_ON@2x.png */,
@@ -695,6 +755,11 @@
 				046D836E187962DA0094F214 /* AKTabBarController.bundle in Resources */,
 				046D837C187966CE0094F214 /* CustomCell.xib in Resources */,
 				046D837E187966CE0094F214 /* TestViewController.xib in Resources */,
+				049268FC187A466C00383E0C /* sousuo.png in Resources */,
+				049268FE187A4A2B00383E0C /* sousuonew.png in Resources */,
+				049D62E0187CE3BF00729266 /* SearchVC.xib in Resources */,
+				049D62E5187D225700729266 /* DetailVC.xib in Resources */,
+				049D62EA187D41DD00729266 /* WebVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,6 +811,15 @@
 				046D8580187968AC0094F214 /* SBJsonWriter.m in Sources */,
 				046D86BF18796FB20094F214 /* NSStringEx.m in Sources */,
 				046D86C018796FB20094F214 /* NSMutableDictionaryTaobao.m in Sources */,
+				049268FA187A410000383E0C /* UIViewController+AKTabBarController.m in Sources */,
+				0498F82D187A875100AF452A /* FirstViewController.m in Sources */,
+				0498F82E187A875100AF452A /* SecondViewController.m in Sources */,
+				0498F82F187A875100AF452A /* ThirdViewController.m in Sources */,
+				0498F830187A875100AF452A /* FourthViewController.m in Sources */,
+				0498F831187A875100AF452A /* ContentViewController.m in Sources */,
+				049D62DF187CE3BE00729266 /* SearchVC.m in Sources */,
+				049D62E4187D225700729266 /* DetailVC.m in Sources */,
+				049D62E9187D41DD00729266 /* WebVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,9 +13,14 @@
 #import "ASIHTTPRequest.h"
 #import "SBJSON.h"
 #import "MJRefresh.h"
+#import "AppDelegate.h"
+#import "DetailVC.h"
+#import "UIViewController+AKTabBarController.h"
+
 @interface TestViewController () <MJRefreshBaseViewDelegate>
 {
      MJRefreshFooterView *_footer;
+    
     
 }
 
@@ -31,9 +36,22 @@ static int page_no;
     if (self) {
         // Custom initialization
         self.array =[[NSMutableArray alloc] init ];
+       
+        AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+        self.search= myDelegate.testsch;
     }
     return self;
 }
+
+//- (NSString *)tabImageName
+//{
+//	return @"sousuonew";
+//}
+//
+//- (NSString *)tabTitle
+//{
+//	return @"搜你所爱";
+//}
 
 -(void)loadmore
 {
@@ -44,7 +62,10 @@ static int page_no;
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 	[dict testDefault];
     [dict setObject:count forKey:@"page_no"];
-	[dict setObject:@"iPhone" forKey:@"keyword"];
+    NSString *s1=self.search;
+    //    NSString *s2= [NSURL URLWithString: [s1 stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] ;
+   	[dict setObject:s1 forKey:@"keyword"];
+    
 	NSString *urlString = [dict urlString];
 	urlString = [NSString stringWithFormat:@"http://api.59miao.com/router/rest?%@", urlString];
 	urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -69,10 +90,49 @@ static int page_no;
         
         NSLog(@"已增加到item");
     }
-
+    
     [self.tableView reloadData];
     // 结束刷新状态
     [_footer endRefreshing];
+    
+    
+    
+//    //页码增加
+//    page_no++;
+//    NSString *count = [NSString stringWithFormat:@"%d", page_no];
+//    
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//	[dict testDefault];
+//    [dict setObject:count forKey:@"page_no"];
+//	[dict setObject:@"iPhone" forKey:@"keyword"];
+//	NSString *urlString = [dict urlString];
+//	urlString = [NSString stringWithFormat:@"http://api.59miao.com/router/rest?%@", urlString];
+//	urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//	NSURL *url = [NSURL URLWithString:urlString];
+//    //asihttprequest 测试
+//    ASIHTTPRequest *ASIrequest = [ASIHTTPRequest requestWithURL:url];
+//    [ASIrequest startSynchronous];
+//    NSError *error = [ASIrequest error];
+//    if(!error){
+//        NSString *response = [ASIrequest responseString];
+//        //        NSLog(response);
+//        SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+//        NSMutableDictionary *dict = [jsonParser objectWithString:response];
+//        //                NSLog(dict);
+//        NSMutableDictionary *itemdic = [dict valueForKey:@"items_search_response"];
+//        NSMutableDictionary *itemscst =[itemdic valueForKey:@"items_search"];
+//        
+//        NSMutableDictionary *items = [itemscst valueForKey:@"items"];
+//        NSMutableArray *item =[items valueForKey:@"item"];
+//        //已获取到item
+//        [self.array addObjectsFromArray:item];
+//        
+//        NSLog(@"已增加到item");
+//    }
+//
+//    [self.tableView reloadData];
+//    // 结束刷新状态
+//    [_footer endRefreshing];
 
 }
 
@@ -82,6 +142,57 @@ static int page_no;
     
     [super viewDidLoad];
     self.navigationItem.title= @"测试";
+    
+//    // 防止block循环retain，所以用__unsafe_unretained
+//    __unsafe_unretained TestViewController *vc = self;
+//    
+//    //页码
+//    page_no=1;
+//    
+//    // 4.3行集成上拉加载更多控件
+//    _footer = [MJRefreshFooterView footer];
+//    _footer.scrollView = self.tableView;
+//    _footer.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
+////        [vc loadmore];
+//     // 2秒后刷新表格
+//       [vc performSelector:@selector(loadmore) withObject:nil afterDelay:0.5];
+//    };
+////
+//    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+//	[dict testDefault];
+//    NSString *temp=@"iPhone";
+//  
+//  
+//	[dict setObject:temp forKey:@"keyword"];
+//	NSString *urlString = [dict urlString];
+//	urlString = [NSString stringWithFormat:@"http://api.59miao.com/router/rest?%@", urlString];
+//	urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//    NSLog(urlString);
+//	NSURL *url = [NSURL URLWithString:urlString];
+//    
+//    //	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    //	[web loadRequest:request];
+//    
+//    //asihttprequest 测试
+//    ASIHTTPRequest *ASIrequest = [ASIHTTPRequest requestWithURL:url];
+//    [ASIrequest startSynchronous];
+//    NSError *error = [ASIrequest error];
+//    if(!error){
+//        NSString *response = [ASIrequest responseString];
+//        //        NSLog(response);
+//        SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+//        NSMutableDictionary *dict = [jsonParser objectWithString:response];
+//        //                NSLog(dict);
+//        NSMutableDictionary *itemdic = [dict valueForKey:@"items_search_response"];
+//        NSMutableDictionary *itemscst =[itemdic valueForKey:@"items_search"];
+//        
+//        NSMutableDictionary *items = [itemscst valueForKey:@"items"];
+//        NSMutableArray *item =[items valueForKey:@"item"];
+//        //已获取到item
+//        self.array = item;
+//        
+//        NSLog(@"已获取到item");
+//    }
     
     // 防止block循环retain，所以用__unsafe_unretained
     __unsafe_unretained TestViewController *vc = self;
@@ -93,14 +204,14 @@ static int page_no;
     _footer = [MJRefreshFooterView footer];
     _footer.scrollView = self.tableView;
     _footer.beginRefreshingBlock = ^(MJRefreshBaseView *refreshView) {
-//        [vc loadmore];
-     // 2秒后刷新表格
-       [vc performSelector:@selector(loadmore) withObject:nil afterDelay:0.5];
+        //        [vc loadmore];
+        // 2秒后刷新表格
+        [vc performSelector:@selector(loadmore) withObject:nil afterDelay:0.5];
     };
-//
+    //
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
 	[dict testDefault];
-	[dict setObject:@"iPhone" forKey:@"keyword"];
+	[dict setObject:self.search forKey:@"keyword"];
 	NSString *urlString = [dict urlString];
 	urlString = [NSString stringWithFormat:@"http://api.59miao.com/router/rest?%@", urlString];
 	urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -119,6 +230,20 @@ static int page_no;
         NSMutableDictionary *dict = [jsonParser objectWithString:response];
         //                NSLog(dict);
         NSMutableDictionary *itemdic = [dict valueForKey:@"items_search_response"];
+        NSString *total=[itemdic valueForKey:@"total_results"];
+        if([total isEqualToString:@"0"])
+        {
+            
+            
+            UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                          message:@"这是一个简单的警告框！"
+                                                         delegate:nil
+                                                cancelButtonTitle:@"确定"
+                                                otherButtonTitles:nil];
+            [alert show];
+            return;
+    
+        }
         NSMutableDictionary *itemscst =[itemdic valueForKey:@"items_search"];
         
         NSMutableDictionary *items = [itemscst valueForKey:@"items"];
@@ -126,10 +251,14 @@ static int page_no;
         //已获取到item
         self.array = item;
         
+        
+       
+        
         NSLog(@"已获取到item");
     }
+
     
-    
+
 //    [self.tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -162,7 +291,10 @@ static int page_no;
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
+    if(self.array!=nil)
     return self.array.count;
+    else
+        return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -198,7 +330,12 @@ static int page_no;
     [cell.image setImageWithURL:url];
 
     NSString *price = [temp valueForKey:@"price"];
-    cell.price.text = price ;
+    NSString *rmb=@"￥";
+    NSString *pricenew =[rmb stringByAppendingString:price];
+    
+    
+    
+    cell.price.text = pricenew ;
     
     return cell;
 }
@@ -254,6 +391,13 @@ static int page_no;
      [self.navigationController pushViewController:detailViewController animated:YES];
      [detailViewController release];
      */
+    
+      AppDelegate *myDelegate = [[UIApplication sharedApplication] delegate];
+    myDelegate.detail = [self.array objectAtIndex:indexPath.row];
+    
+    DetailVC *de = [[DetailVC alloc] init];
+    [self.navigationController pushViewController:de animated:YES];
+    
 }
 
 

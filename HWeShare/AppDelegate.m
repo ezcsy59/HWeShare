@@ -8,18 +8,39 @@
 
 #import "AppDelegate.h"
 #import "AKTabBarController.h"
+#import "TestViewController.h"
+#import "SecondViewController.h"
+#import "ThirdViewController.h"
+#import "FourthViewController.h"
+#import "SearchVC.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    
 //    [self setupTabBarController];
     // If the device is an iPad, we make it taller.
     _tabBarController = [[AKTabBarController alloc] initWithTabBarHeight:(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) ? 70 : 50];
     [_tabBarController setMinimumHeightToDisplayTitle:40.0];
+    
+    
+    SearchVC *seach=[[SearchVC alloc] init];
+    
+    UINavigationController *nav= [[UINavigationController alloc] initWithRootViewController:seach];
+
+    nav.navigationBar.tintColor= [UIColor darkGrayColor];
+    [_tabBarController setViewControllers:[NSMutableArray arrayWithObjects:
+                                                nav,
+                                           [[SecondViewController alloc] init],[[ThirdViewController alloc] init],[[FourthViewController alloc] init],nil]];
+    // Tab background Image
+    [_tabBarController setBackgroundImageName:@"noise-dark-gray.png"];
+    [_tabBarController setSelectedBackgroundImageName:@"noise-dark-blue.png"];
+    
+    [_window setRootViewController:_tabBarController];              
     
     [self.window makeKeyAndVisible];
     return YES;

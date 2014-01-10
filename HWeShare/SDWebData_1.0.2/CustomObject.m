@@ -21,37 +21,33 @@ static CustomObject *instance=nil;
 	return instance;
 }
 
-//- (void)dealloc
-//{
-//	[imageDictionary release];
-//	[super dealloc];
-//}
-//
-//
-//- (void)addImage :(UIImage *)image key:(NSURL *)url
-//{
-//    if (imageDictionary == nil)
-//	{
-//		imageDictionary = [[NSMutableDictionary dictionaryWithCapacity:10] retain];
-//	}
-//    
-//    [imageDictionary setObject:image forKey:url];
-//}
-//
-//- (BOOL)isExistImage :(NSURL *)url
-//{
-//    if (imageDictionary == nil)
-//	{
-//		imageDictionary = [[NSMutableDictionary dictionaryWithCapacity:10] retain];
-//	}
-//    if ([imageDictionary objectForKey:url]!=nil) {
-//        return YES;
-//    }
-//    else
-//    {
-//        return NO;
-//    }
-//}
+
+
+
+- (void)addImage :(UIImage *)image key:(NSURL *)url
+{
+    if (imageDictionary == nil)
+	{
+		imageDictionary = [NSMutableDictionary dictionaryWithCapacity:10] ;
+	}
+    
+    [imageDictionary setObject:image forKey:url];
+}
+
+- (BOOL)isExistImage :(NSURL *)url
+{
+    if (imageDictionary == nil)
+	{
+		imageDictionary = [NSMutableDictionary dictionaryWithCapacity:10] ;
+	}
+    if ([imageDictionary objectForKey:url]!=nil) {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
 
 - (UIImage *)getImage :(NSURL *)url
 {

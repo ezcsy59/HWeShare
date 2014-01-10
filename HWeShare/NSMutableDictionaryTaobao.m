@@ -1,4 +1,4 @@
-//
+ //
 //  NSMutableDictionaryTaobao.m
 //  audioBook
 //
@@ -19,12 +19,13 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 
 - (NSString*)urlString
 {
-	
-//	NSArray *array = [self allKeys];
+    
+//    NSString *re;
+//    NSArray *array = [self allKeys];
 //	array = [array sortedArrayUsingSelector:@selector(compare:)];
 //	NSMutableString *url = [NSMutableString stringWithCapacity:1024];
 //	NSMutableString *str = [NSMutableString stringWithCapacity:1024];
-//	[str appendString:app_secret_key];
+//    //	[str appendString:app_secret_key];
 //	NSUInteger i, count = [array count];
 //	for (i = 0; i < count; i++) {
 //		if ([url length]) {
@@ -34,8 +35,14 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 //		[url appendFormat:@"%@=%@", obj, [self objectForKey:obj]];
 //		[str appendFormat:@"%@%@",obj, [self objectForKey:obj]];
 //	}
-//	NSString *hash = [str md5];
-//	[self setObject:hash forKey:@"sign"];
+//    re= [app_secret_key stringByAppendingString:str];
+//    NSLog(re);
+//    NSString *hash = [re md5];
+//    
+////    NSString *test = @"7a8c5138e845ee975cb17f8a896c6b79app_key1029925fieldstitle,click_urlformatjsonkeyword三星method59miao.items.searchpage_no1page_size20timestamp2014-01-06 13:27:11v1.1";
+////   hash = [test md5];
+//    
+//    [self setObject:hash forKey:@"sign"];
 //	array = [self allKeys];
 //	array = [array sortedArrayUsingSelector:@selector(compare:)];
 //	[url setString:@""];
@@ -46,9 +53,10 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 //		NSString *obj = [array objectAtIndex:i];
 //		[url appendFormat:@"%@=%@", obj, [self objectForKey:obj]];
 //	}
-//	//[url appendFormat:@"&sign=%@", hash];
+//	
+//    
 //	return url;
-    
+
     NSString *re;
     NSArray *array = [self allKeys];
 	array = [array sortedArrayUsingSelector:@selector(compare:)];
@@ -65,7 +73,10 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 		[str appendFormat:@"%@%@",obj, [self objectForKey:obj]];
 	}
     re= [app_secret_key stringByAppendingString:str];
+    
+    //    re= [NSURL URLWithString: [re stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] ;
     NSLog(re);
+    
     NSString *hash = [re md5];
     [self setObject:hash forKey:@"sign"];
 	array = [self allKeys];
@@ -79,10 +90,10 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 		[url appendFormat:@"%@=%@", obj, [self objectForKey:obj]];
 	}
 	
-    
-	return url;
+    //    url= [NSURL URLWithString: [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]] ;
+    //    NSLog(url);
+    return url;
 
-    
 }
 
 - (NSString*)urlString2
@@ -211,11 +222,11 @@ static NSString* const app_secret_key = @"7a8c5138e845ee975cb17f8a896c6b79";
 //    }
 //    return orgin;
 //}
-
+	   // http://gw.api.tbsandbox.com/router/rest?app_key=test&codeType=JAVA&fields=num_iid,title,nick,pic_url,cid,price,type,delist_time,post_fee,score,volume&format=json&method=taobao.items.search&page_no=1&page_size=40&q=羽绒服&sign=65FA41EC8A3568BD99FABA2CA7C55C00&timestamp=2011-01-19 16:19:01&v=2.0
 
 - (void)testDefault
 {
-	   // http://gw.api.tbsandbox.com/router/rest?app_key=test&codeType=JAVA&fields=num_iid,title,nick,pic_url,cid,price,type,delist_time,post_fee,score,volume&format=json&method=taobao.items.search&page_no=1&page_size=40&q=羽绒服&sign=65FA41EC8A3568BD99FABA2CA7C55C00&timestamp=2011-01-19 16:19:01&v=2.0
+
 	[self setObject:app_key forKey:@"app_key"];
 
 
