@@ -130,6 +130,7 @@
 		04A8663E1869820C00C3194E /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8663C1869820C00C3194E /* GoodsViewController.m */; };
 		04A8663F1869820C00C3194E /* GoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A8663D1869820C00C3194E /* GoodsViewController.xib */; };
 		04AB983E1869275100178CEB /* CRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AB983C1869233700178CEB /* CRTabBarController.m */; };
+		04F87CFE1880FD4E001633E8 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F87CFD1880FD4E001633E8 /* KxMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -315,6 +316,8 @@
 		04A8663D1869820C00C3194E /* GoodsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodsViewController.xib; sourceTree = "<group>"; };
 		04AB983B1869233700178CEB /* CRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CRTabBarController.h; path = CRTabBar/CRTabBarController.h; sourceTree = SOURCE_ROOT; };
 		04AB983C1869233700178CEB /* CRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CRTabBarController.m; path = CRTabBar/CRTabBarController.m; sourceTree = SOURCE_ROOT; };
+		04F87CFC1880FD4E001633E8 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		04F87CFD1880FD4E001633E8 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -566,6 +569,7 @@
 		04AB98391869230500178CEB /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				04F87CFA1880FD3D001633E8 /* menu */,
 				046D83B5187968AA0094F214 /* SBJson_3.1.1 */,
 				046D83AE187967390094F214 /* SDWebData_1.0.2 */,
 				0498AFE9186AC3CA00090B73 /* Tools */,
@@ -643,6 +647,23 @@
 				04A865B41869334800C3194E /* ICN_tab_search@2x.png */,
 			);
 			name = image;
+			sourceTree = "<group>";
+		};
+		04F87CFA1880FD3D001633E8 /* menu */ = {
+			isa = PBXGroup;
+			children = (
+				04F87CFB1880FD4E001633E8 /* Source */,
+			);
+			name = menu;
+			sourceTree = "<group>";
+		};
+		04F87CFB1880FD4E001633E8 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				04F87CFC1880FD4E001633E8 /* KxMenu.h */,
+				04F87CFD1880FD4E001633E8 /* KxMenu.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -820,6 +841,7 @@
 				049D62DF187CE3BE00729266 /* SearchVC.m in Sources */,
 				049D62E4187D225700729266 /* DetailVC.m in Sources */,
 				049D62E9187D41DD00729266 /* WebVC.m in Sources */,
+				04F87CFE1880FD4E001633E8 /* KxMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
