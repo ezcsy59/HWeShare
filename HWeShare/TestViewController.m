@@ -16,6 +16,7 @@
 #import "AppDelegate.h"
 #import "DetailVC.h"
 #import "UIViewController+AKTabBarController.h"
+#import "SearchVC.h"
 
 @interface TestViewController () <MJRefreshBaseViewDelegate>
 {
@@ -235,12 +236,14 @@ static int page_no;
         {
             
             
-            UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"
-                                                          message:@"这是一个简单的警告框！"
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                          message:@"暂无此商品，以后会陆续添加\n 请按返回"
                                                          delegate:nil
                                                 cancelButtonTitle:@"确定"
                                                 otherButtonTitles:nil];
             [alert show];
+        
+            
             return;
     
         }
@@ -257,8 +260,10 @@ static int page_no;
         NSLog(@"已获取到item");
     }
 
-    
+  
 
+    
+    
 //    [self.tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -266,6 +271,18 @@ static int page_no;
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString* msg = [[NSString alloc] initWithFormat:@"您按下的第%d个按钮！",buttonIndex];
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示"
+                                                   message:msg
+                                                  delegate:nil
+                                         cancelButtonTitle:@"确定"
+                                         otherButtonTitles:nil];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

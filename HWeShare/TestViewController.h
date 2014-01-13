@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomCell.h"
-@interface TestViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate>
+@interface TestViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>
 {
 
     
