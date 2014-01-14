@@ -44,6 +44,8 @@
 		046D8580187968AC0094F214 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D83D1187968AA0094F214 /* SBJsonWriter.m */; };
 		046D86BF18796FB20094F214 /* NSStringEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D86BC18796FB10094F214 /* NSStringEx.m */; };
 		046D86C018796FB20094F214 /* NSMutableDictionaryTaobao.m in Sources */ = {isa = PBXBuildFile; fileRef = 046D86BE18796FB20094F214 /* NSMutableDictionaryTaobao.m */; };
+		047E463C1883CE1500A85527 /* icon_big.png in Resources */ = {isa = PBXBuildFile; fileRef = 047E463B1883CE1500A85527 /* icon_big.png */; };
+		047E463E1883CE2000A85527 /* icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 047E463D1883CE2000A85527 /* icon_small.png */; };
 		049268FA187A410000383E0C /* UIViewController+AKTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049268F9187A410000383E0C /* UIViewController+AKTabBarController.m */; };
 		049268FC187A466C00383E0C /* sousuo.png in Resources */ = {isa = PBXBuildFile; fileRef = 049268FB187A466A00383E0C /* sousuo.png */; };
 		049268FE187A4A2B00383E0C /* sousuonew.png in Resources */ = {isa = PBXBuildFile; fileRef = 049268FD187A4A2900383E0C /* sousuonew.png */; };
@@ -201,6 +203,8 @@
 		046D86BC18796FB10094F214 /* NSStringEx.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringEx.m; sourceTree = "<group>"; };
 		046D86BD18796FB10094F214 /* NSMutableDictionaryTaobao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSMutableDictionaryTaobao.h; sourceTree = "<group>"; };
 		046D86BE18796FB20094F214 /* NSMutableDictionaryTaobao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableDictionaryTaobao.m; sourceTree = "<group>"; };
+		047E463B1883CE1500A85527 /* icon_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_big.png; sourceTree = "<group>"; };
+		047E463D1883CE2000A85527 /* icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_small.png; sourceTree = "<group>"; };
 		049268F8187A410000383E0C /* UIViewController+AKTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AKTabBarController.h"; sourceTree = "<group>"; };
 		049268F9187A410000383E0C /* UIViewController+AKTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AKTabBarController.m"; sourceTree = "<group>"; };
 		049268FB187A466A00383E0C /* sousuo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sousuo.png; sourceTree = "<group>"; };
@@ -343,6 +347,8 @@
 		0458920A18691D3700FC2B10 = {
 			isa = PBXGroup;
 			children = (
+				047E463D1883CE2000A85527 /* icon_small.png */,
+				047E463B1883CE1500A85527 /* icon_big.png */,
 				0458921C18691D3700FC2B10 /* HWeShare */,
 				0458921518691D3700FC2B10 /* Frameworks */,
 				0458921418691D3700FC2B10 /* Products */,
@@ -782,6 +788,8 @@
 				049D62E0187CE3BF00729266 /* SearchVC.xib in Resources */,
 				049D62E5187D225700729266 /* DetailVC.xib in Resources */,
 				049D62EA187D41DD00729266 /* WebVC.xib in Resources */,
+				047E463C1883CE1500A85527 /* icon_big.png in Resources */,
+				047E463E1883CE2000A85527 /* icon_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
